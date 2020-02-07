@@ -1,0 +1,53 @@
+
+body {
+    background: #dcdcdc;
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrapper {
+    max-width: 1170px;
+    margin:  0 auto;
+    padding: 0 15px;
+}
+.navigation {
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0; /*  убираем ботомы у меню  */
+}
+.nav>li {
+    padding-left: 23px;
+    margin-left: 22px;
+    position: relative;
+}
+.nav>li::before {
+    content: ''; 
+    display: block; /* добавляем черточки после каждой li */
+    width: 2px;
+    height: 100%;
+    background: #494949;
+    position: absolute;
+    left: 0;
+}
+.nav>li:first-child {
+    padding-left: 0;    
+    margin-left: 0; /*  подвинули влево меню  */
+}
+.nav>li:first-child::before {
+    display: none; /* убираем первый элемент */
+} 
+.nav>li>a {
+    text-decoration: none;
+    color: #494949;
+
+}
